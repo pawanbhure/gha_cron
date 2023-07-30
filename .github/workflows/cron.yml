@@ -1,8 +1,6 @@
 name: Daily Cron Job
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/15 * * * *'
 
 jobs:
   cron_job:
