@@ -1,5 +1,6 @@
 name: Daily Cron Job
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/10 * * * *'
 
@@ -17,4 +18,5 @@ jobs:
       - name: Run some commands
         run: |
           echo "Running cron job..."
+          echo "Running on ${{ runner.os }} version ${{ runner.os_version }}"
           # Add your commands here
