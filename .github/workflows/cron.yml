@@ -1,0 +1,20 @@
+name: Daily Cron Job
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  cron_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      # Add your desired steps here
+      # For example, you can run tests, build, or deploy your application
+      # Below is just an example to echo a message.
+
+      - name: Run some commands
+        run: |
+          echo "Running cron job..."
+          # Add your commands here
